@@ -46,7 +46,7 @@ class Captcha(object):
     def create_captcha(self):
         """ 创建图片验证码 """
         image = ImageCaptcha(fonts=self.fonts)
-        code = self.gen_verify_code(self.code_len)
+        code = self.gen_verify_code()
         stream = image.generate(code)
         # 图片的base64字符串格式：data:image/png;base64,<base64字符串>
         img_base64 = 'data:image/png;base64,{base64_str}'.format(
