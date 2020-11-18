@@ -1,0 +1,6 @@
+captcha==0.3
+Pillow==8.0.1
+ipython==7.16.1
+python-dotenv==0.15.0
+autopep8==1.5.4
+httpie==2.3.0

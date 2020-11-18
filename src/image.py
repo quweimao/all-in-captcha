@@ -1,6 +1,7 @@
 import os
 import string
 import random
+import base64
 
 from captcha.image import ImageCaptcha
 
@@ -21,8 +22,10 @@ def create_captcha():
     """ 创建图片验证码 """
     image = ImageCaptcha(fonts=DEFAULT_FONTS)
     code = gen_verify_code(4)
-    data = image.generate(code)
-    image.write(code, 'out.png')
+    stream = image.generate(code)
+    # 图片的base64字符串格式：data:image/png;data,<base64字符串>
+    print('===', str(base64.b64encode(stream.getvalue()), encoding='utf-8'))
+    image.write(code, '{code}.png'.format(code=code))
 
 
 def gen_verify_code(length):

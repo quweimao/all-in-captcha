@@ -1,0 +1,17 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+captcha = "==0.3"
+pillow = "==8.0.1"
+ipython = "==7.16.1"
+python-dotenv = "==0.15.0"
+autopep8 = "==1.5.4"
+httpie = "==2.3.0"
+
+[requires]
+python_version = "3.6"
